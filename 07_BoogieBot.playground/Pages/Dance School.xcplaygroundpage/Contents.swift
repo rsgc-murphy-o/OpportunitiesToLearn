@@ -23,26 +23,26 @@ shakeItCenter()
 ```
  Once BoogieBot gets to the end of the routine it will stop. You can use Editor > Execute Playground to see the moves again. Changing the routine itself will start things over again.
 */
-fabulize()
-fabulize()
-fabulize()
-fabulize()
-leftArmUp()
-rightArmUp()
-
-leftLegUp()
-rightLegUp()
-leftLegDown()
-rightLegDown()
-shakeItLeft()
-shakeItRight()
-shakeItCenter()
-jumpUp()
-jumpDown()
-
-leftArmDown()
-rightArmDown()
 defabulize()
+rightArmDown()
+leftArmDown()
+
+jumpDown()
+jumpUp()
+shakeItCenter()
+shakeItRight()
+shakeItLeft()
+rightLegDown()
+leftLegDown()
+rightLegUp()
+leftLegUp()
+
+rightArmUp()
+leftArmUp()
+fabulize()
+fabulize()
+fabulize()
+fabulize()
 
 //: - experiment: Rearrange the lines of code above to remix the dance routine. BoogieBot performs the moves in the order they appear in the playground.\
 //:What happens if you fabulize or defabulize in the middle of a dance routine?

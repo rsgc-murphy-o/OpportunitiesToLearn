@@ -13,7 +13,7 @@
 */
 startBot()
 setBotTitle("Sunday Night Fever")
-setBotSubtitle("By John Showboater")
+setBotSubtitle("By Oliver Murphy")
 
 func doTheDisco() {
     fabulize()

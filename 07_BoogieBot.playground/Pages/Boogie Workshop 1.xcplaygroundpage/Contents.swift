@@ -19,7 +19,26 @@
 startBot()
 startRecording()
 
+setBotTitle("The next dance craze")
+setBotSubtitle("You saw it here first!")
 
+fabulize()
+leftArmUp()
+rightArmUp()
+
+leftLegUp()
+rightLegUp()
+leftLegDown()
+rightLegDown()
+shakeItLeft()
+shakeItRight()
+shakeItCenter()
+jumpUp()
+jumpDown()
+
+leftArmDown()
+rightArmDown()
+defabulize()
 
 
 

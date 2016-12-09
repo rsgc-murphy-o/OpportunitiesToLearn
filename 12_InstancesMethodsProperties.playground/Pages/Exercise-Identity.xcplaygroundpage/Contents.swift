@@ -10,7 +10,7 @@ Below the declaration of `friendPlans`, update `myPlans` by using the addition o
 Check the values of `myPlans` and `friendPlans`. Are they the same or different?
  */
 // Create your variables here:
-
+    var myPlans 
 
 
 // Update `myPlans` here:

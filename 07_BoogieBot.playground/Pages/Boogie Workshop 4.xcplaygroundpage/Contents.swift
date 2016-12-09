@@ -19,6 +19,28 @@
 startBot()
 startRecording()
 
+setBotTitle("Boogie Bot")
+setBotSubtitle("By Oliver Murphy")
+
+fabulize()
+fabulize()
+rightArmUp()
+leftArmUp()
+
+rightLegUp()
+leftLegUp()
+rightLegDown()
+leftLegDown()
+shakeItLeft()
+shakeItRight()
+shakeItCenter()
+jumpUp()
+jumpDown()
+
+rightArmDown()
+leftArmDown()
+defabulize()
+
 
 
 

@@ -20,8 +20,6 @@ let alternateIntroduction = "Once upon a time"
 introduction.hasPrefix("It was")
 
 introduction.hasPrefix("It wasn't")
-
-alternateIntroduction.hasPrefix("It was")
 alternateIntroduction.hasPrefix("It wasn't")
 
 /*:
