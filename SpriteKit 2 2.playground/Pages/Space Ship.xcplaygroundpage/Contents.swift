@@ -5,33 +5,58 @@
 import SpriteKit
 import PlaygroundSupport
 
-let frame = CGRect(x: 0, y: 0, width: 320, height: 256)
-let midPoint = CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0)
+let frame = CGRect(x: 0, y: 0, width: 500, height: 300)
+let midPoint = CGPoint(x: frame.size.width / 1.9, y: frame.size.height / 1.9)
+let corner = CGPoint(x: frame.size.width / 1.3, y: frame.size.height / 1.3)
+let lowerCorner = CGPoint(x: frame.size.width / 4, y: frame.size.height / 3)
+
+
+
 
 var scene = SKScene(size: frame.size)
 
 let spaceShip = SKSpriteNode(imageNamed: "Spaceship")
 spaceShip.position = midPoint
-spaceShip.setScale(1.0)
+spaceShip.setScale(0.7)
 scene.addChild(spaceShip)
 
+let planet = SKSpriteNode(imageNamed: "planet")
+planet.position = corner
+planet.setScale(1.0)
+scene.addChild(planet)
 
-let actionMoveUp = SKAction.moveBy(x: 0, y: 40, duration: 3.00)
-let actionMoveDown = SKAction.moveBy(x: 0, y: -40, duration: 5.00)
+let alienSpaceShip = SKSpriteNode(imageNamed: "alienSpaceShip")
+alienSpaceShip.position = lowerCorner
+alienSpaceShip.setScale(0.7)
+scene.addChild(alienSpaceShip)
+
+
+
+
+let actionMoveUp = SKAction.moveBy(x: 0, y: 30, duration: 3.00)
+let actionMoveDown = SKAction.moveBy(x: 0, y: -30, duration: 5.00)
 let actionSequence = SKAction.sequence([actionMoveUp, actionMoveDown])
+let SecondaryActionSequence = SKAction.sequence([actionMoveDown, actionMoveUp])
 let actionRepeat = SKAction.repeatForever(actionSequence)
+let secondaryActionRepeat = SKAction.repeatForever(SecondaryActionSequence)
+
+
 spaceShip.run(actionRepeat)
-let actionRotate = SKAction.rotate(byAngle: -CGFloat.pi/2, duration: 5)
+let actionRotate = SKAction.rotate(byAngle: -CGFloat.pi/2, duration: 0.00001)
 spaceShip.run(actionRotate)
 spaceShip.zPosition = 10  // Ensure sprite is above background
+
+alienSpaceShip.run(secondaryActionRepeat)
+alienSpaceShip.run(actionRotate)
+alienSpaceShip.zPosition = 10  // Ensure sprite is above background
 
 
 
 let emitter = SKEmitterNode()
 emitter.particleLifetime = 40
 emitter.particleBlendMode = SKBlendMode.alpha
-emitter.particleBirthRate = 3
-emitter.particleSize = CGSize(width: 4,height: 4)
+emitter.particleBirthRate = 5
+emitter.particleSize = CGSize(width: 20,height: 2)
 emitter.particleColor = SKColor(red: 100, green: 100, blue: 255, alpha: 1)
 emitter.position = CGPoint(x:frame.size.width,y:midPoint.y)
 emitter.particleSpeed = 16
